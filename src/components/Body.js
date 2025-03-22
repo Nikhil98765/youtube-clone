@@ -1,5 +1,6 @@
-import { Sidebar } from './Sidebar'
 import { Outlet } from 'react-router-dom';
+
+import { Sidebar } from './Sidebar'
 
 export const Body = () => {
   return (
