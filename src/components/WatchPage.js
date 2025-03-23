@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import { hideSideBar } from '../store/appSlice';
 import { VIDEO_URL } from '../utils/constants';
+import { CommentsContainer } from './CommentsContainer';
 
 export const WatchPage = () => {
 
@@ -34,6 +35,9 @@ export const WatchPage = () => {
       ></iframe>
       <div className='mt-4'>
         <h1 className='font-bold text-xl'>{videoDetails?.snippet?.title}</h1>
+      </div>
+      <div>
+        <CommentsContainer />
       </div>
     </div>
   );

@@ -7,3 +7,4 @@ Concepts that got covered:
 5. higher order components
 6. debouncing
 7. caching for search suggestions
+8. Comments
