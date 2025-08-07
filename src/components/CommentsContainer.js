@@ -1,4 +1,3 @@
-import React from 'react';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 
 const commentsData = [
@@ -67,7 +66,7 @@ export const CommentsList = ({ comments }) => (
 
 export const CommentsContainer = () => {
   return (
-    <div className='mt-4'>
+    <div className='m-4'>
       <h1 className='font-bold'>Comments</h1>
       <CommentsList comments={commentsData}/>
     </div>

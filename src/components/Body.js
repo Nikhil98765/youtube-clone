@@ -4,7 +4,7 @@ import { Sidebar } from './Sidebar'
 
 export const Body = () => {
   return (
-    <div className="grid grid-cols-12">
+    <div className="flex content-stretch">
       <Sidebar />
       <Outlet />
     </div>

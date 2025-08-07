@@ -61,8 +61,8 @@ export const Header = () => {
   }, [searchQuery]);
 
   return (
-    <div className="grid grid-cols-12">
-      <div className="col-span-2">
+    <div className="flex mb-2">
+      <div className="w-1/4">
         <Link className="flex" to={'/'}>
           <MenuRoundedIcon
             fontSize="large"
@@ -75,12 +75,12 @@ export const Header = () => {
           />
         </Link>
       </div>
-      <div className="col-span-8 text-center p-2">
+      <div className="w-2/4 text-center p-2">
         <div>
           <input
             type="text"
             placeholder="Search"
-            className="w-1/2 p-5 h-[40px] border border-gray-300 border-r-0 rounded-l-full"
+            className="w-1/2 p-5 h-[40px] border border-gray-300 border-r-0 rounded-l-full shadow-xl"
             value={searchQuery}
             onChange={(event) => setSearchQuery(event.target.value)}
             onFocus={() => setShowSuggestions(true)}
@@ -88,12 +88,12 @@ export const Header = () => {
           />
           <SearchRoundedIcon
             fontSize="large"
-            className="w-4 p-1 -mt-1 border border-gray-300 rounded-r-full"
+            className="w-4 p-1 -mt-1 border border-gray-300 rounded-r-full shadow-xl"
             style={{ height: '42px', width: '50px' }}
           />
         </div>
         {showSuggestions && suggestions.length > 0 && (
-          <div className="fixed bg-white p-2 w-[38.7rem] mx-auto ml-[18.5rem] border shadow-md border-gray-200     rounded-lg">
+          <div className="fixed bg-white p-2 w-[38.7rem] mx-auto ml-[18.5rem] border shadow-md border-gray-200 rounded-lg">
             <ul>
               {suggestions.map((suggestion) => (
                 <li key={suggestion} className="p-1 text-left">
@@ -105,7 +105,7 @@ export const Header = () => {
           </div>
         )}
       </div>
-      <div className="col-span-2 flex justify-end p-2">
+      <div className="w-1/4 flex justify-end p-2">
         <AccountCircleRoundedIcon fontSize="large" />
       </div>
     </div>
